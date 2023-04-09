@@ -1,13 +1,15 @@
 import React from "react";
 import { AppBar, Toolbar } from "@mui/material";
-import { img } from "react";
 import logo from "../popcon.png";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <img src={logo} alt="My Blog" style={{ height: "40px" }} />
+        <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+          <img src={logo} alt="Your Logo" style={{ height: "60px" }} />
+        </Link>
       </Toolbar>
     </AppBar>
   );
