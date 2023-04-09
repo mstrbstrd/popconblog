@@ -1,15 +1,30 @@
 import React from "react";
-import { AppBar, Toolbar } from "@mui/material";
+import { AppBar, Toolbar, Box, Button } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import logo from "../popcon.png";
-import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+        <RouterLink
+          to="/"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            textDecoration: "none",
+          }}
+        >
           <img src={logo} alt="Your Logo" style={{ height: "60px" }} />
-        </Link>
+        </RouterLink>
+        <Box sx={{ flexGrow: 1 }} />
+        <Button
+          component={RouterLink}
+          to="/about"
+          sx={{ color: (theme) => theme.palette.secondary.light }}
+        >
+          About
+        </Button>
       </Toolbar>
     </AppBar>
   );
