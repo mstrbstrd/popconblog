@@ -16,31 +16,34 @@ function Home({ blogPosts }) {
 
   return (
     <Box>
-      {blogPosts.map((post) => (
-        <Link
-          to={`/blog/${post.title}`}
-          key={post.title}
-          style={{ textDecoration: "none" }}
-        >
-          <Card sx={{ mb: 4 }}>
-            <CardMedia
-              component="img"
-              height="400"
-              image={post.image}
-              alt={`${post.title} image`}
-            />
-            <CardHeader
-              title={post.title}
-              subheader={`By ${post.author} on ${post.date}`}
-            />
-            <CardContent>
-              <Typography variant="body1" sx={{ mb: 2 }}>
-                {truncate(post.content, 56)}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Link>
-      ))}
+      {blogPosts
+        .slice()
+        .reverse()
+        .map((post) => (
+          <Link
+            to={`/blog/${post.title}`}
+            key={post.title}
+            style={{ textDecoration: "none" }}
+          >
+            <Card sx={{ mb: 4 }}>
+              <CardMedia
+                component="img"
+                height="400"
+                image={post.image}
+                alt={`${post.title} image`}
+              />
+              <CardHeader
+                title={post.title}
+                subheader={`By ${post.author} on ${post.date}`}
+              />
+              <CardContent>
+                <Typography variant="body1" sx={{ mb: 2 }}>
+                  {truncate(post.content, 56)}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Link>
+        ))}
     </Box>
   );
 }
