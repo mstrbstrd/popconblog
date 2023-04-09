@@ -3,7 +3,7 @@ const blogPosts = [
   {
     title: "Leadership Ala Euthyphro",
     author: "Shaedan Hawse & GPT-4",
-    date: "April 1, 2023",
+    date: "April 8, 2023",
     image: midJourneyGreekImage,
     content: `The following is a conversation between myself and GPT-4...
   
