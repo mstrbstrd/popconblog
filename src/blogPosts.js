@@ -30,14 +30,14 @@ const blogPosts = [
   Socrates: Your insights have been most enlightening, noble stranger. I am grateful for this dialogue on the nature of good leadership, and I shall contemplate your words with great care.`,
   },
 
-  {
-    title: "My Second Blog Post",
-    author: "Jane Smith",
-    date: "April 2, 2023",
-    image: "https://via.placeholder.com/150",
-    content:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  },
+  //   {
+  //     title: "My Second Blog Post",
+  //     author: "Jane Smith",
+  //     date: "April 2, 2023",
+  //     image: "https://via.placeholder.com/150",
+  //     content:
+  //       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  //   },
 ];
 
 export default blogPosts;
