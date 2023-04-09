@@ -1,9 +1,16 @@
 import { createTheme } from "@mui/material/styles";
-import { pink } from "@mui/material/colors";
+import { pink, blueGrey } from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
-    primary: pink,
+    primary: {
+      main: pink[600],
+      light: pink[200],
+    },
+    secondary: {
+      main: blueGrey[700],
+      light: blueGrey[200],
+    },
     background: {
       default: "#f5f5f5",
     },
