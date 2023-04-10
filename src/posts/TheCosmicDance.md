@@ -50,9 +50,10 @@ Do you have any thoughts on how the concept of interconnectedness might help in 
 
 Shae:
 This is very funny to me because it happens to be one of the main reasons that I want to create Popular consensus.. a decentralized and permissionless public utility where humanity can ask questions of each other and seek the wisdom of the crowd. In the long off future I also see it as a way for AI's to take account for humanities views on situations and to seek our wisdom as well. Like a family member would seek the wisdom of a parent or grandparent.
-It's wonderful to see that you have a vision for creating a platform like Popular Consensus. Decentralized and permissionless systems that leverage the collective wisdom of the crowd can offer valuable insights and perspectives that might otherwise be overlooked.
 
 GPT-4:
+It's wonderful to see that you have a vision for creating a platform like Popular Consensus. Decentralized and permissionless systems that leverage the collective wisdom of the crowd can offer valuable insights and perspectives that might otherwise be overlooked.
+
 Your idea of using such a platform to help AI systems better understand and account for humanity's views and wisdom aligns well with the concept of interconnectedness. By enabling AI to tap into the diverse opinions and experiences of people from all walks of life, we can develop AI systems that are more in tune with human values and priorities.
 
 This approach also acknowledges the importance of human intuition, experience, and wisdom, recognizing that even as AI becomes more advanced, there is still much to learn from the collective human experience. By fostering a dialogue between AI and humanity, Popular Consensus could potentially contribute to solving the alignment problem and ensuring that AI development remains centered on human needs and values.
