@@ -24,12 +24,12 @@ const AboutMe = () => {
       <br />
       <Typography variant="body1" align="center">
         Shaedan Hawse, also known as MSTRBSTRD (pronounced master bastard), is a
-        freelance web developer, entrepreneur and creator of Popular Consulting,
-        a firm which helps businesses and individuals build their online
-        presence through web design, development and integrating machine
-        learning and blockchain technology.
+        freelance web developer with his firm Popular Consulting, which helps
+        businesses and individuals build their online presence through web
+        design, development and integrating machine learning and blockchain
+        technology.
       </Typography>
-      <br />
+      {/* <br />
       <Typography variant="body1" align="center">
         A founding member of Further Beyond, an art and music collective that
         aims to provide a platform for artists and creatives. Further Beyond is
@@ -45,7 +45,7 @@ const AboutMe = () => {
         still in the early stages of development, Popular Consensus has the
         potential to create a more equitable and just society through its
         innovative polling system and community-driven approach.
-      </Typography>
+      </Typography> */}
       <br />
       <Typography variant="body1" align="center">
         As a generalist with a diverse range of interests and skills, Shae

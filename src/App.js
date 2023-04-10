@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Container } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -6,13 +6,19 @@ import Home from "./components/Home";
 import BlogPost from "./components/BlogPost";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-import blogPosts from "./blogPosts";
+import getBlogPosts from "./blogPosts";
 import About from "./components/AboutMe.js";
 
 import theme from "./theme";
 import "./index.css";
 
 function App() {
+  const [blogPosts, setBlogPosts] = useState([]);
+
+  useEffect(() => {
+    getBlogPosts().then((posts) => setBlogPosts(posts));
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Router>
