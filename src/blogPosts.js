@@ -1,7 +1,9 @@
 import midJourneyGreekImage from "./imgs/midjourneygreek2.png";
 import thecosmicdanceImage from "./imgs/thecosmicdance2.png";
+import cyclesOfChangeImage from "./imgs/cyclicalhistory.png";
 import leadershipAlaEuthyphroText from "./posts/LeadershipAlaEuthyphro.md";
 import thecosmicdanceText from "./posts/TheCosmicDance.md";
+import cyclesOfChangeText from "./posts/CyclesOfChange.md";
 
 async function fetchText(file) {
   const response = await fetch(file);
@@ -31,7 +33,16 @@ async function getBlogPosts() {
     thecosmicdanceText
   );
 
-  return [leadershipAlaEuthyphro, theCosmicDance];
+  const cyclesOfChange = await createBlogPost(
+    "Cycles of Change: Navigating the Echoes of History",
+    "Shaedan Hawse & GPT-4",
+    "April 11, 2023",
+    cyclesOfChangeImage,
+    cyclesOfChangeText
+  );
+    
+
+  return [leadershipAlaEuthyphro, theCosmicDance, cyclesOfChange];
 }
 
 export default getBlogPosts;
