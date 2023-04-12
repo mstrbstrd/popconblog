@@ -3,6 +3,7 @@ import { Box, Container } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
+
 import BlogPost from "./components/BlogPost";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -11,6 +12,7 @@ import About from "./components/AboutMe.js";
 
 import theme from "./theme";
 import "./index.css";
+import HomeContainer from "./components/HomeContainer";
 
 function App() {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -23,20 +25,21 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            minHeight: "100vh",
-            backgroundColor: "#f5f5f5",
-          }}
-        >
+  sx={{
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
+    backgroundColor: "#f5f5f5",
+    position: 'relative',
+    zIndex: 0,
+  }}
+>
           <NavBar />
           <Box sx={{ flexGrow: 1, py: 4 }}>
-            <Container maxWidth="md">
               <Routes>
                 <Route
                   path="/"
-                  element={<Home blogPosts={blogPosts} />}
+                  element={<HomeContainer blogPosts={blogPosts} />}
                   index
                 />
                 <Route
@@ -45,7 +48,6 @@ function App() {
                 />
                 <Route path="/about" element={<About />} />
               </Routes>
-            </Container>
           </Box>
           <Footer />
         </Box>

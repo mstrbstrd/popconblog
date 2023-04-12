@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Box,
   Card,
@@ -6,12 +6,12 @@ import {
   CardHeader,
   CardMedia,
   Typography,
-} from "@mui/material";
-import { Link } from "react-router-dom";
+} from '@mui/material';
+import { Link } from 'react-router-dom';
 
 function Home({ blogPosts }) {
   const truncate = (str, length) => {
-    return str.length > length ? str.substring(0, length) + "..." : str;
+    return str.length > length ? str.substring(0, length) + '...' : str;
   };
 
   return (
@@ -23,7 +23,7 @@ function Home({ blogPosts }) {
           <Link
             to={`/blog/${post.title}`}
             key={post.title}
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: 'none' }}
           >
             <Card sx={{ mb: 4 }}>
               <CardMedia
