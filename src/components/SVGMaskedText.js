@@ -24,6 +24,7 @@ const scrollingAnimation = keyframes`
 
 const AnimatedGroup = muiStyled('g')(({ theme }) => ({
   animation: `${scrollingAnimation} 25s linear infinite`,
+  willChange: 'transform',
 }));
 
 const SVGMaskedText = ({
