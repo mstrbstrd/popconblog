@@ -55,7 +55,7 @@ Thank you to those that continue to read these works. If you'd ever like to chat
 .
 .
 .
-If you're interested in learning more about Austerity and the history of it's implementation as well as the class struggles of the post WW1 era I strongly suggest reading The Capital Order: How Economists Invented Austerity and Paved the Way to Fascism. It is an excellent read but fair warning, if you are like me it will make you very angry.
+If you're interested in learning more about Austerity and the history of it's implementation as well as the class struggles of the post WW1 era I strongly suggest reading The Capital Order: How Economists Invented Austerity and Paved the Way to Fascism by Clara E. Mattei. It is an excellent read but fair warning, if you are like me it will make you very angry.
 
 Cheers,
 Shae.

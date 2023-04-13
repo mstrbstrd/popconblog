@@ -1,11 +1,15 @@
 import midJourneyGreekImage from "./imgs/midjourneygreek2.png";
 import thecosmicdanceImage from "./imgs/thecosmicdance2.png";
 import cyclesOfChangeImage from "./imgs/cyclicalhistory.png";
+import AusterityHiddenImpactImage from "./imgs/austerityhiddenimpact.png"
+import CollectiveActionDigitalAgeImage from "./imgs/collectiveactiondigitalage.png"
 import leadershipAlaEuthyphroText from "./posts/LeadershipAlaEuthyphro.md";
 import thecosmicdanceText from "./posts/TheCosmicDance.md";
 import cyclesOfChangeText from "./posts/CyclesOfChange.md";
 import AusterityHiddenImpactText from "./posts/AusterityHiddenImpact.md"
-import AusterityHiddenImpactImage from "./imgs/austerityhiddenimpact.png"
+import CollectiveActionDigitalAgeText from "./posts/CollectiveActionDigitalAge.md"
+
+
 
 async function fetchText(file) {
   const response = await fetch(file);
@@ -50,9 +54,18 @@ async function getBlogPosts() {
     AusterityHiddenImpactImage,
     AusterityHiddenImpactText
   );
+
+  const CollectiveActionDigitalAge = await createBlogPost(
+    "Collective Action in the Digital Age: A Guide for Modern Activism",
+    "Shaedan Hawse & GPT-4",
+    "April 13, 2023",
+    CollectiveActionDigitalAgeImage,
+    CollectiveActionDigitalAgeText
+
+  );
     
 
-  return [leadershipAlaEuthyphro, theCosmicDance, cyclesOfChange, AusterityHiddenImpact];
+  return [leadershipAlaEuthyphro, theCosmicDance, cyclesOfChange, AusterityHiddenImpact, CollectiveActionDigitalAge];
 }
 
 export default getBlogPosts;
