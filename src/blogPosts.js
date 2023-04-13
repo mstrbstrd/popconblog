@@ -4,6 +4,8 @@ import cyclesOfChangeImage from "./imgs/cyclicalhistory.png";
 import leadershipAlaEuthyphroText from "./posts/LeadershipAlaEuthyphro.md";
 import thecosmicdanceText from "./posts/TheCosmicDance.md";
 import cyclesOfChangeText from "./posts/CyclesOfChange.md";
+import AusterityHiddenImpactText from "./posts/AusterityHiddenImpact.md"
+import AusterityHiddenImpactImage from "./imgs/austerityhiddenimpact.png"
 
 async function fetchText(file) {
   const response = await fetch(file);
@@ -40,9 +42,17 @@ async function getBlogPosts() {
     cyclesOfChangeImage,
     cyclesOfChangeText
   );
+
+  const AusterityHiddenImpact = await createBlogPost(
+    "Austerity's Hidden Impact: The Working Class & The Path to Change",
+    "Shaedan Hawse & GPT-4",
+    "April 12, 2023",
+    AusterityHiddenImpactImage,
+    AusterityHiddenImpactText
+  );
     
 
-  return [leadershipAlaEuthyphro, theCosmicDance, cyclesOfChange];
+  return [leadershipAlaEuthyphro, theCosmicDance, cyclesOfChange, AusterityHiddenImpact];
 }
 
 export default getBlogPosts;
