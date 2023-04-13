@@ -1,10 +1,11 @@
 import React from "react";
-import { Typography, CardMedia } from "@mui/material";
+import { Typography, CardMedia, Container } from "@mui/material";
 import meImage from "../imgs/me2.JPG"; // Import the image from the src/imgs folder
 
 const AboutMe = () => {
   return (
     <div>
+      <Container maxWidth="md">
       <CardMedia
         component="img"
         alt="Your Name"
@@ -60,6 +61,7 @@ const AboutMe = () => {
       <Typography variant="body1" align="center">
         * * *
       </Typography>
+      </Container>
     </div>
   );
 };
