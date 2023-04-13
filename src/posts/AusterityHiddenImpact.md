@@ -1,4 +1,4 @@
-The following was written by Shaedan Hawse and GPT-4
+--The following was written by Shaedan Hawse and GPT-4
 
 Part 1: The Great War and the Crisis in the UK and Italy
 
