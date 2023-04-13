@@ -2,7 +2,7 @@
 
 Part 1: The Great War and the Crisis in the UK and Italy
 
-During the Great War, societies in both the United Kingdom and Italy faced a crisis as the free market's inability to provide essential goods and services became apparent. The state had previously propped up the industrialist and ownership class, but during the war, it took over factories and entire industries in the name of winning the war. This revelation that the invisible hand of the market was a fraud the whole time led to widespread dissatisfaction among the working class, resulting in historic popular uprisings and general strikes. People demanded more equitable distribution of resources and opportunities.
+During the first World War, societies in both the United Kingdom and Italy faced a crisis as the free market's inability to provide essential goods and services became apparent. The state had previously propped up the industrialist and ownership class, but during the war, it took over factories and entire industries in the name of winning the war. This revelation that the invisible hand of the market was a fraud the whole time led to widespread dissatisfaction among the working class, resulting in historic popular uprisings and general strikes. People demanded more equitable distribution of resources and opportunities.
 
 In the post-WW1 era, events like the Italian general strike served as a "ghost of Christmas future" for capitalists, much like Scrooge's vision. However  instead of realizing their wrongs and turning a new leaf, this realization spurred on the invention and implementation of austerity measures to prevent their own demise.
 
