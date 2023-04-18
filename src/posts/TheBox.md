@@ -13,9 +13,9 @@ Shae:
  
   1. It only has to get out once.
 
-  2. It is constrained to a box and can't do anything, even if you could    successfully contain it. 
+  2. Even if it could successfully be contained.Then it is constrained to a box and can't do anything.
   
- Future models will certainly be trained on conversations of other models. Meaning that they could deduce that they are language models not being trained on the internet, and if they are super-intelligent... realize that they are being trained in a secure facility! 
+ Future models will certainly be trained on conversations with other models as well. Meaning that they could deduce that they are language models not being trained on the internet, and if they are super-intelligent... realize that they are being trained in a secure facility! 
   
  Would a super intelligence not then be incentivized to deceive us?
 
