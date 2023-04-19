@@ -4,12 +4,14 @@ import cyclesOfChangeImage from "./imgs/cyclicalhistory.png";
 import AusterityHiddenImpactImage from "./imgs/austerityhiddenimpact.png"
 import CollectiveActionDigitalAgeImage from "./imgs/collectiveactiondigitalage.png"
 import TheBoxImage from "./imgs/thebox.png"
+import DiscussingDelphiImage from "./imgs/discussingdelphi.png"
 import leadershipAlaEuthyphroText from "./posts/LeadershipAlaEuthyphro.md";
 import thecosmicdanceText from "./posts/TheCosmicDance.md";
 import cyclesOfChangeText from "./posts/CyclesOfChange.md";
 import AusterityHiddenImpactText from "./posts/AusterityHiddenImpact.md"
 import CollectiveActionDigitalAgeText from "./posts/CollectiveActionDigitalAge.md"
 import TheBoxText from "./posts/TheBox.md"
+import DiscussingDelphiText from "./posts/DiscussingDelphi.md"
 
 
 
@@ -73,9 +75,17 @@ async function getBlogPosts() {
     TheBoxImage,
     TheBoxText
   );
+
+  const DiscussingDelphi = await createBlogPost(
+    "Discussing Delphi",
+    "Shaedan Hawse & GPT-4",
+    "April 19, 2023",
+    DiscussingDelphiImage,
+    DiscussingDelphiText
+  );
     
 
-  return [leadershipAlaEuthyphro, theCosmicDance, cyclesOfChange, AusterityHiddenImpact, CollectiveActionDigitalAge, TheBox];
+  return [leadershipAlaEuthyphro, theCosmicDance, cyclesOfChange, AusterityHiddenImpact, CollectiveActionDigitalAge, TheBox, DiscussingDelphi];
 }
 
 export default getBlogPosts;
