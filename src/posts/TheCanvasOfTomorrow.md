@@ -2,9 +2,10 @@ The following is a conversation between myself and GPT-4...
 
 Shae:
 Today we are going to chat about what it means to create and be an artist in the 21st century and the age of AI. First, what makes art and what does it mean to create? What does it mean to create and make art in an age where machines can generate anything that a human can do but better? Should artists just roll over and give up? 
-Creating art is a deeply human endeavor that involves expressing emotions, experiences, ideas, and perspectives through various mediums such as painting, music, literature, and performance. At its core, art is a form of communication and self-expression that allows individuals to connect with others and explore the complexities of human existence.
 
 GPT:
+Creating art is a deeply human endeavor that involves expressing emotions, experiences, ideas, and perspectives through various mediums such as painting, music, literature, and performance. At its core, art is a form of communication and self-expression that allows individuals to connect with others and explore the complexities of human existence.
+
 In the 21st century, the age of AI has introduced new tools and technologies that have expanded the artistic landscape. AI-generated art has the potential to challenge our understanding of creativity and raise questions about authorship and originality. However, it is essential to remember that AI is a tool, and its capabilities are an extension of human ingenuity.
 
 Artists should not feel threatened or compelled to give up in the face of AI advancements. Instead, they should embrace the new possibilities and use AI as a collaborator to push the boundaries of their art. Human creativity is a unique, complex, and ever-evolving phenomenon that cannot be wholly replicated by machines.
