@@ -6,6 +6,7 @@ import CollectiveActionDigitalAgeImage from "./imgs/collectiveactiondigitalage.p
 import TheBoxImage from "./imgs/thebox.png"
 import DiscussingDelphiImage from "./imgs/discussingdelphi.png"
 import DiscussingDelphi2Image from "./imgs/discussingdelphi2.png"
+import CanvasOfTomorrowImage from "./imgs/canvasoftomorrow.png"
 import leadershipAlaEuthyphroText from "./posts/LeadershipAlaEuthyphro.md";
 import thecosmicdanceText from "./posts/TheCosmicDance.md";
 import cyclesOfChangeText from "./posts/CyclesOfChange.md";
@@ -14,6 +15,7 @@ import CollectiveActionDigitalAgeText from "./posts/CollectiveActionDigitalAge.m
 import TheBoxText from "./posts/TheBox.md"
 import DiscussingDelphiText from "./posts/DiscussingDelphi.md"
 import DiscussingDelphi2Text from "./posts/DiscussingDelphi2.md"
+import CanvasOfTomorrowText from "./posts/TheCanvasOfTomorrow.md"
 
 
 
@@ -89,9 +91,17 @@ async function getBlogPosts() {
   const DiscussingDelphi2 = await createBlogPost(
     "Discussing Delphi II",
     "Shaedan Hawse & GPT-4",
-    "April 19, 2023",
+    "April 21, 2023",
     DiscussingDelphi2Image,
     DiscussingDelphi2Text
+  );
+
+  const CanvasOfTomorrow = await createBlogPost(
+    "The Canvas of Tomorrow: The Synergy Between Artists and AI in the 21st Century",
+    "Shaedan Hawse & GPT-4",
+    "April 26, 2023",
+    CanvasOfTomorrowImage,
+    CanvasOfTomorrowText
   );
 
   return [
@@ -102,7 +112,8 @@ async function getBlogPosts() {
     CollectiveActionDigitalAge,
     TheBox,
     DiscussingDelphi,
-    DiscussingDelphi2
+    DiscussingDelphi2,
+    CanvasOfTomorrow
   ];
 }
 
