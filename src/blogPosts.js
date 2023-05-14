@@ -7,6 +7,9 @@ import TheBoxImage from "./imgs/thebox.png"
 import DiscussingDelphiImage from "./imgs/discussingdelphi.png"
 import DiscussingDelphi2Image from "./imgs/discussingdelphi2.png"
 import CanvasOfTomorrowImage from "./imgs/canvasoftomorrow.png"
+import TrumanCreativeImage from "./imgs/truman2.png"
+
+
 import leadershipAlaEuthyphroText from "./posts/LeadershipAlaEuthyphro.md";
 import thecosmicdanceText from "./posts/TheCosmicDance.md";
 import cyclesOfChangeText from "./posts/CyclesOfChange.md";
@@ -16,6 +19,7 @@ import TheBoxText from "./posts/TheBox.md"
 import DiscussingDelphiText from "./posts/DiscussingDelphi.md"
 import DiscussingDelphi2Text from "./posts/DiscussingDelphi2.md"
 import CanvasOfTomorrowText from "./posts/TheCanvasOfTomorrow.md"
+import TrumanCreativeText from "./posts/TrumanCreative.md"
 
 
 
@@ -104,6 +108,14 @@ async function getBlogPosts() {
     CanvasOfTomorrowText
   );
 
+  const TrumanCreative = await createBlogPost(
+    "The Dream: The Paradox of Artistic Authenticity",
+    "Shaedan Hawse & GPT-4",
+    "May 14, 2023",
+    TrumanCreativeImage,
+    TrumanCreativeText
+  );
+
   return [
     leadershipAlaEuthyphro,
     theCosmicDance,
@@ -113,7 +125,8 @@ async function getBlogPosts() {
     TheBox,
     DiscussingDelphi,
     DiscussingDelphi2,
-    CanvasOfTomorrow
+    CanvasOfTomorrow,
+    TrumanCreative
   ];
 }
 
