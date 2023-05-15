@@ -22,7 +22,7 @@ Plan 2: Overcoming the Catch-22
 
 1. Quality Over Quantity: Focus on producing high-quality work that truly represents your artistic vision.
 2. Utilize Digital Platforms: Leverage various digital platforms to ensure your work reaches as many people as possible.
-3. ollaborate and Network: Engage in creative collaborations and network with other artists and creative communities.
+3. Collaborate and Network: Engage in creative collaborations and network with other artists and creative communities.
 4. Embrace Innovation: Stay open to new technologies and methods of self-promotion.
 
 In conclusion, the attention economy, while challenging, is not all doom and gloom. By setting clear boundaries, prioritizing mental health, and utilizing technology effectively, artists can maintain a public presence without compromising their authenticity. By focusing on quality over quantity, leveraging digital platforms, and collaborating with others, they can also overcome the catch-22 of the attention economy. These strategies might not provide a perfect solution, but they offer a path towards a more sustainable and fulfilling artistic practice in the digital age.
@@ -35,4 +35,4 @@ In conclusion, the attention economy, while challenging, is not all doom and glo
 .
 .
 .
-Hey there, this is Shae again. I hope you enjoyed this post. They may be coming a little more infrequently at the moment because life is busy and this is a passion project. If you did or do enjoy, please consider sharing it with someone else or following my on social media on twitter @mstrbstrdd or on instagram @mstrbstrd. If you want to support me financially, you can do so by donating ethereum to mstrbstrd.eth Thanks for reading!
+Hey there, this is Shae again. I hope you enjoyed this post. They may be coming a little more infrequently at the moment because life is busy and this is a passion project. If you did or do enjoy, please consider sharing it with someone else or by following me on social media... twitter @mstrbstrdd or on instagram @mstrbstrd. If you want to support me financially, you can do so by donating ethereum to mstrbstrd.eth Thanks for reading!
