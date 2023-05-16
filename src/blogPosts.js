@@ -8,6 +8,7 @@ import DiscussingDelphiImage from "./imgs/discussingdelphi.png"
 import DiscussingDelphi2Image from "./imgs/discussingdelphi2.png"
 import CanvasOfTomorrowImage from "./imgs/canvasoftomorrow.png"
 import TrumanCreativeImage from "./imgs/truman2.png"
+import CosmicCarouselImage from "./imgs/cosmiccarousel.png"
 
 
 import leadershipAlaEuthyphroText from "./posts/LeadershipAlaEuthyphro.md";
@@ -20,6 +21,7 @@ import DiscussingDelphiText from "./posts/DiscussingDelphi.md"
 import DiscussingDelphi2Text from "./posts/DiscussingDelphi2.md"
 import CanvasOfTomorrowText from "./posts/TheCanvasOfTomorrow.md"
 import TrumanCreativeText from "./posts/TrumanCreative.md"
+import CosmicCarouselText from "./posts/CosmicCarousel.md"
 
 
 
@@ -116,6 +118,14 @@ async function getBlogPosts() {
     TrumanCreativeText
   );
 
+  const CosmicCarousel = await createBlogPost(
+    "Cosmic Carousel and the Universal Teapot",
+    "Shaedan Hawse & GPT-4",
+    "May 15, 2023",
+    CosmicCarouselImage,
+    CosmicCarouselText
+  );
+
   return [
     leadershipAlaEuthyphro,
     theCosmicDance,
@@ -126,7 +136,8 @@ async function getBlogPosts() {
     DiscussingDelphi,
     DiscussingDelphi2,
     CanvasOfTomorrow,
-    TrumanCreative
+    TrumanCreative,
+    CosmicCarousel
   ];
 }
 
