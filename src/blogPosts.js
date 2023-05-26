@@ -9,6 +9,8 @@ import DiscussingDelphi2Image from "./imgs/discussingdelphi2.png"
 import CanvasOfTomorrowImage from "./imgs/canvasoftomorrow.png"
 import TrumanCreativeImage from "./imgs/truman2.png"
 import CosmicCarouselImage from "./imgs/cosmiccarousel.png"
+import PopConImage from "./imgs/popconorb2.png"
+import ArtistAdviceImage from "./imgs/artistadvice.png"
 
 
 import leadershipAlaEuthyphroText from "./posts/LeadershipAlaEuthyphro.md";
@@ -22,6 +24,8 @@ import DiscussingDelphi2Text from "./posts/DiscussingDelphi2.md"
 import CanvasOfTomorrowText from "./posts/TheCanvasOfTomorrow.md"
 import TrumanCreativeText from "./posts/TrumanCreative.md"
 import CosmicCarouselText from "./posts/CosmicCarousel.md"
+import PopConText from "./posts/PopCon.md"
+import ArtistAdviceText from "./posts/ArtistAdvice.md"
 
 
 
@@ -126,6 +130,22 @@ async function getBlogPosts() {
     CosmicCarouselText
   );
 
+  const PopularConsensus = await createBlogPost(
+    "Popular Consensus: Seeking the Wisdom of the Crowd",
+    "Shaedan Hawse & GPT-4",
+    "May 18, 2023",
+    PopConImage,
+    PopConText
+  );
+
+  const ArtistAdvice = await createBlogPost(
+    "Artist Advice: Navigating the Paradox of the Living Artist",
+    "Shaedan Hawse & GPT-4",
+    "May 25, 2023",
+    ArtistAdviceImage,
+    ArtistAdviceText
+  );
+
   return [
     leadershipAlaEuthyphro,
     theCosmicDance,
@@ -137,7 +157,8 @@ async function getBlogPosts() {
     DiscussingDelphi2,
     CanvasOfTomorrow,
     TrumanCreative,
-    CosmicCarousel
+    CosmicCarousel,
+    ArtistAdvice
   ];
 }
 
