@@ -139,7 +139,7 @@ async function getBlogPosts() {
   );
 
   const ArtistAdvice = await createBlogPost(
-    "Artist Advice: Navigating the Paradox of the Living Artist",
+    "Navigating the Darkness of the Living Artist",
     "Shaedan Hawse & GPT-4",
     "May 25, 2023",
     ArtistAdviceImage,
