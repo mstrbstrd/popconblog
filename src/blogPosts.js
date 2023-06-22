@@ -158,7 +158,8 @@ async function getBlogPosts() {
     CanvasOfTomorrow,
     TrumanCreative,
     CosmicCarousel,
-    ArtistAdvice
+    ArtistAdvice,
+    PopularConsensus
   ];
 }
 
