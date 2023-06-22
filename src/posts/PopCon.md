@@ -1,4 +1,5 @@
-The following was written by Shaedan Hawse & GPT-4...
+--The following was written by Shaedan Hawse and GPT-4
+
 
 Proposal for "Popular Consensus": A Decentralized Public Utility
 
