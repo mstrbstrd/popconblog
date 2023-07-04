@@ -11,6 +11,8 @@ import TrumanCreativeImage from "./imgs/truman2.png"
 import CosmicCarouselImage from "./imgs/cosmiccarousel.png"
 import PopConImage from "./imgs/popconorb2.png"
 import ArtistAdviceImage from "./imgs/artistadvice.png"
+import DPU1Image from "./imgs/dpu.png"
+import DPU2Image from "./imgs/dpu2.png"
 
 
 import leadershipAlaEuthyphroText from "./posts/LeadershipAlaEuthyphro.md";
@@ -26,6 +28,8 @@ import TrumanCreativeText from "./posts/TrumanCreative.md"
 import CosmicCarouselText from "./posts/CosmicCarousel.md"
 import PopConText from "./posts/PopCon.md"
 import ArtistAdviceText from "./posts/ArtistAdvice.md"
+import DAOText from "./posts/DPU1.md"
+import DPUText from "./posts/DPU2.md"
 
 
 
@@ -146,6 +150,22 @@ async function getBlogPosts() {
     ArtistAdviceText
   );
 
+  const DPU1 = await createBlogPost(
+    "The Dawn of DAOs: How Blockchain is Revolutionizing Work and Organization",
+    "Shaedan Hawse & GPT-4",
+    "July 2, 2023",
+    DPU1Image,
+    DAOText
+  );
+
+  const DPU2 = await createBlogPost(
+    "Towards a New Digital Order: Decentralized Public Utilities",
+    "Shaedan Hawse & GPT-4",
+    "July 3, 2023",
+    DPU2Image,
+    DPUText
+  );
+
   return [
     leadershipAlaEuthyphro,
     theCosmicDance,
@@ -159,6 +179,8 @@ async function getBlogPosts() {
     TrumanCreative,
     CosmicCarousel,
     ArtistAdvice,
+    DPU1,
+    DPU2,
     PopularConsensus
   ];
 }
