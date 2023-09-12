@@ -10,10 +10,11 @@ function HomeContainer({ blogPosts }) {
   return (
     <Box>
       <Hero>
-        <SVGMaskedText
+      <SVGMaskedText
   text="POPULAR CONSUMPTION" // Duplicate the text for a continuous banner
   imageUrl={backgroundImage}
   fontSize={{ xs: '1rem', sm: '1rem', md: '2rem' }} // Remove lg and xl, keep md as 2rem
+  animate={true}
 />
       </Hero>
       <Container maxWidth="md" sx={{ mt: 4 }}>

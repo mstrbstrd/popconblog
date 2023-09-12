@@ -1,6 +1,5 @@
 import React from 'react';
 import { styled as muiStyled, keyframes } from '@mui/system';
-import { useTheme } from '@mui/material/styles';
 
 const ResponsiveText = muiStyled('text')(({ theme, fontSize }) => ({
   [theme.breakpoints.down('sm')]: {
@@ -10,7 +9,7 @@ const ResponsiveText = muiStyled('text')(({ theme, fontSize }) => ({
     fontSize: fontSize.sm,
   },
   [theme.breakpoints.up('md')]: {
-    fontSize: fontSize.sm,
+    fontSize: fontSize.xs,
   },
 }));
 
@@ -23,41 +22,54 @@ const createScrollingAnimation = (direction) => keyframes`
   }
 `;
 
-const AnimatedGroup = muiStyled('g')(({ direction }) => ({
-  animation: `${createScrollingAnimation(direction)} 10s linear infinite`,
-  willChange: 'transform',
+const AnimatedGroup = muiStyled('g')(({ direction, animate }) => ({
+  animation: animate ? `${createScrollingAnimation(direction)} 10s linear infinite` : 'none',
 }));
 
 const SVGMaskedText = ({
   text,
   imageUrl,
-  fontSize = { xs: '1rem', sm: '2rem', md: '4rem' },
+  fontSize = { xs: '0.75rem', sm: '1.5rem', md: '3rem' },
   textColor = 'F5F5F5',
+  animate = false, // Prop to control animation
 }) => {
-  const theme = useTheme();
-  const words = text.split(' ');
+  const indexOfFirstSpace = text.indexOf(' ');
+  const firstPart = text.substring(0, indexOfFirstSpace);
+  const secondPart = text.substring(indexOfFirstSpace + 1);
 
   return (
     <svg width="100%" height="100%" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
       <defs>
         <mask id="text-mask">
           <rect x="0" y="0" width="100%" height="100%" fill="white" />
-          {words.map((word, index) => (
-            <AnimatedGroup key={word} direction={index % 2 === 0 ? 'left' : 'right'}>
-              <ResponsiveText
-                textAnchor="middle"
-                x="50%"
-                y={`${50 + (index % 2 === 0 ? -1 : 1) * 5}%`}
-                dy=".35em"
-                fontSize={fontSize}
-                fontFamily="sans-serif"
-                fontWeight="bold"
-                fill="black"
-              >
-                {word}
-              </ResponsiveText>
-            </AnimatedGroup>
-          ))}
+          <AnimatedGroup direction='left' animate={animate}>
+            <ResponsiveText
+              textAnchor="middle"
+              x="50%"
+              y="45%"
+              dy=".35em"
+              fontSize={fontSize}
+              fontFamily="sans-serif"
+              fontWeight="bold"
+              fill="black"
+            >
+              {firstPart}
+            </ResponsiveText>
+          </AnimatedGroup>
+          <AnimatedGroup direction='right' animate={animate}>
+            <ResponsiveText
+              textAnchor="middle"
+              x="50%"
+              y="55%"
+              dy=".35em"
+              fontSize={fontSize}
+              fontFamily="sans-serif"
+              fontWeight="bold"
+              fill="black"
+            >
+              {secondPart}
+            </ResponsiveText>
+          </AnimatedGroup>
         </mask>
       </defs>
       <image
