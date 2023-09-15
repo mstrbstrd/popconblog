@@ -1,23 +1,27 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Card, CardMedia } from '@mui/material';
+import { Card, CardMedia, IconButton } from '@mui/material';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import PauseIcon from '@mui/icons-material/Pause';
 
 const AlbumComponent = ({ tracklist, imageUrl }) => {
   const [slide, setSlide] = useState(false);
   const coverRef = useRef(null);
   const [slideAmount, setSlideAmount] = useState('0px');
   const [coverDimensions, setCoverDimensions] = useState({ width: '0px', height: '0px' });
-  const [fontSize, setFontSize] = useState('14px'); // Default font size
+  const [fontSize, setFontSize] = useState('14px');
+  const audioRef = useRef(null);
+
+  const [currentlyPlaying, setCurrentlyPlaying] = useState(null);
 
   const updateDimensions = () => {
     if (coverRef.current) {
       const { offsetWidth, offsetHeight } = coverRef.current;
       setSlideAmount(`${offsetWidth / 2}px`);
       setCoverDimensions({ width: `${offsetWidth}px`, height: `${offsetHeight}px` });
-
-      // Calculating font size and spacing dynamically
-      const baseFontSize = 14; // You can adjust this value as needed
-      const calculatedFontSize = Math.min((offsetHeight - 10) / tracklist.length, baseFontSize);
-      setFontSize(`${calculatedFontSize}px`);
+      
+      // Adjust font size based on the number of tracks and card height
+      const baseFontSize = Math.min(offsetHeight / (tracklist.length * 2), 14);
+      setFontSize(`${baseFontSize}px`);
     }
   };
 
@@ -27,14 +31,41 @@ const AlbumComponent = ({ tracklist, imageUrl }) => {
     return () => {
       window.removeEventListener('resize', updateDimensions);
     };
-  }, [tracklist.length]);
+  }, [tracklist]);
 
   const handleAlbumClick = () => {
     setSlide(!slide);
   };
 
+  const handleTrackClick = (e, trackNumber, trackName) => {
+    e.stopPropagation();
+    const sanitizedTrackName = trackName.replace(/\(.*?\)/g, '').trim().toLowerCase().replace(/\s+/g, '');
+    const formattedTrackNumber = String(trackNumber).padStart(2, '0');
+    const expectedAudioFileName = `/music/${formattedTrackNumber}_${sanitizedTrackName}_FUTLOTM_FINALMASTER.wav`;
+
+    if (audioRef.current) {
+      if (audioRef.current.src.endsWith(expectedAudioFileName)) {
+        if (audioRef.current.paused) {
+          audioRef.current.play().catch(error => {
+            console.error("Audio playback failed:", error);
+          });
+          setCurrentlyPlaying(trackNumber);
+        } else {
+          audioRef.current.pause();
+          setCurrentlyPlaying(null);
+        }
+      } else {
+        audioRef.current.src = expectedAudioFileName;
+        audioRef.current.play().catch(error => {
+          console.error("Audio playback failed:", error);
+        });
+        setCurrentlyPlaying(trackNumber);
+      }
+    }
+  };
+
   return (
-    <div onClick={handleAlbumClick} style={{ position: 'relative', maxWidth: '600px', margin: '20px auto'}}>
+    <div onClick={handleAlbumClick} style={{ position: 'relative', maxWidth: '600px', margin: '20px auto' }}>
       <div
         style={{
           position: 'absolute',
@@ -47,16 +78,27 @@ const AlbumComponent = ({ tracklist, imageUrl }) => {
           width: coverDimensions.width,
           height: coverDimensions.height,
           transition: 'left 0.5s',
-          overflowY: 'auto', // Enable scrolling
+          overflowY: 'auto',
         }}
+        onClick={(e) => e.stopPropagation()}
       >
         {tracklist.map((track, index) => (
-          <div key={index} style={{
-            borderBottom: index < tracklist.length - 1 ? '1px solid #d1d1d1' : 'none',
-            padding: '10px 0',
-            fontSize: fontSize, // Dynamic font size
-          }}>
-            {index + 1}. {track} {/* Adding track numbers */}
+          <div
+            key={index}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              borderBottom: index < tracklist.length - 1 ? '1px solid #d1d1d1' : 'none',
+              padding: '5px 0',
+              fontSize: fontSize,
+              cursor: 'pointer'
+            }}
+            onClick={(e) => handleTrackClick(e, index + 1, track)}
+          >
+            <IconButton size="small">
+              {(currentlyPlaying === index + 1 && !audioRef.current.paused) ? <PauseIcon /> : <PlayArrowIcon />}
+            </IconButton>
+            {index + 1}. {track}
           </div>
         ))}
       </div>
@@ -77,10 +119,9 @@ const AlbumComponent = ({ tracklist, imageUrl }) => {
           style={{ borderRadius: '15px' }}
         />
       </Card>
+      <audio ref={audioRef}></audio>
     </div>
   );
 };
 
 export default AlbumComponent;
-
-

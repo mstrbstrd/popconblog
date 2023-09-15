@@ -15,6 +15,7 @@ function PressKitContainer() {
         <SVGMaskedText
           text="Fire! Under The Light Of The Moon."
           imageUrl={backgroundImage} // Adjust the font sizes as you need
+          sx={{ fontFamily: "'Teko', sans-serif", color: '#D71A60', textDecoration: 'underline' }}
         />
       </Hero>
       <PressKit />
