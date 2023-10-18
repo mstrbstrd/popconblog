@@ -14,6 +14,7 @@ import ArtistAdviceImage from "./imgs/artistadvice.png"
 import DPU1Image from "./imgs/dpu.png"
 import DPU2Image from "./imgs/dpu2.png"
 import MindYourBodyImage from "./imgs/mindyourbody.png"
+import EnigmaticConfluenceImage from "./imgs/enigmaticconfluence.png"
 
 
 import leadershipAlaEuthyphroText from "./posts/LeadershipAlaEuthyphro.md";
@@ -32,6 +33,7 @@ import ArtistAdviceText from "./posts/ArtistAdvice.md"
 import DAOText from "./posts/DPU1.md"
 import DPUText from "./posts/DPU2.md"
 import MindYourBodyText from "./posts/MindYourBody.md"
+import EnigmaticConfluenceText from "./posts/EnigmaticConfluence.md"
 
 
 
@@ -171,10 +173,19 @@ async function getBlogPosts() {
   const MindYourBody = await createBlogPost(
     "Mind Your Body",
     "Shaedan Hawse & GPT-4 Codex",
-    "July9, 2023",
+    "July 9, 2023",
     MindYourBodyImage,
     MindYourBodyText
   );
+
+  const EnigmaticConfluence = await createBlogPost(
+    "Enigmatic Confluence",
+    "Shaedan Hawse & GPT-4",
+    "October 17, 2023",
+    EnigmaticConfluenceImage,
+    EnigmaticConfluenceText
+  );
+
 
   return [
     leadershipAlaEuthyphro,
@@ -189,10 +200,11 @@ async function getBlogPosts() {
     TrumanCreative,
     CosmicCarousel,
     ArtistAdvice,
-    MindYourBody,
     DPU1,
     DPU2,
-    PopularConsensus
+    PopularConsensus,
+    MindYourBody,
+    EnigmaticConfluence
   ];
 }
 
