@@ -15,6 +15,7 @@ import DPU1Image from "./imgs/dpu.png"
 import DPU2Image from "./imgs/dpu2.png"
 import MindYourBodyImage from "./imgs/mindyourbody.png"
 import EnigmaticConfluenceImage from "./imgs/enigmaticconfluence.png"
+import PessimistManifestoImage from "./imgs/pessimist_manifesto.png"
 
 
 import leadershipAlaEuthyphroText from "./posts/LeadershipAlaEuthyphro.md";
@@ -34,6 +35,7 @@ import DAOText from "./posts/DPU1.md"
 import DPUText from "./posts/DPU2.md"
 import MindYourBodyText from "./posts/MindYourBody.md"
 import EnigmaticConfluenceText from "./posts/EnigmaticConfluence.md"
+import PessimistManifestoText from "./posts/PessimistManifesto.md"
 
 
 
@@ -186,6 +188,14 @@ async function getBlogPosts() {
     EnigmaticConfluenceText
   );
 
+  const PessimistManifesto = await createBlogPost(
+    "Pessimist Manifesto Pt. 1",
+    "Shaedan Hawse & GPT-4",
+    "January 16, 2024",
+    PessimistManifestoImage,
+    PessimistManifestoText
+  );
+
 
   return [
     leadershipAlaEuthyphro,
@@ -204,7 +214,8 @@ async function getBlogPosts() {
     DPU2,
     PopularConsensus,
     MindYourBody,
-    EnigmaticConfluence
+    EnigmaticConfluence,
+    PessimistManifesto
   ];
 }
 
